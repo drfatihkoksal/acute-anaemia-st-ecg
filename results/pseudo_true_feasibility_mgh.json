@@ -1,0 +1,83 @@
+{
+ "pairs_with_12sl": {
+  "n": 898761,
+  "frac": 0.9999944367857528
+ },
+ "post_isch_rate_by_dhb": [
+  {
+   "g": "drop>=2",
+   "n": 55059,
+   "post_isch": 0.15281788626745854,
+   "new_isch": 0.08534481192902159
+  },
+  {
+   "g": "other",
+   "n": 394655,
+   "post_isch": 0.16583851718589654,
+   "new_isch": 0.07401401223853746
+  },
+  {
+   "g": "rise>=1",
+   "n": 83081,
+   "post_isch": 0.16879912374670503,
+   "new_isch": 0.07816468265909172
+  },
+  {
+   "g": "stable",
+   "n": 365961,
+   "post_isch": 0.1723161757673632,
+   "new_isch": 0.07081101759755165
+  }
+ ],
+ "acute_drop_ischemic_ecg": [
+  {
+   "grp": "pseudo",
+   "n": 589,
+   "subjects": 573
+  },
+  {
+   "grp": "true",
+   "n": 1844,
+   "subjects": 1746
+  },
+  {
+   "grp": "indeterminate",
+   "n": 5981,
+   "subjects": 5590
+  }
+ ],
+ "acute_drop_NEW_ischemic_ecg": [
+  {
+   "grp": "pseudo",
+   "n": 324,
+   "subjects": 322
+  },
+  {
+   "grp": "indeterminate",
+   "n": 3498,
+   "subjects": 3416
+  },
+  {
+   "grp": "true",
+   "n": 877,
+   "subjects": 866
+  }
+ ],
+ "true_by_source": [
+  {
+   "mi_icd": false,
+   "trop_pos": true,
+   "n": 1271
+  },
+  {
+   "mi_icd": true,
+   "trop_pos": false,
+   "n": 203
+  },
+  {
+   "mi_icd": true,
+   "trop_pos": true,
+   "n": 370
+  }
+ ]
+}

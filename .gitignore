@@ -1,0 +1,9 @@
+# patient-level intermediates must never be committed
+out/
+*.parquet
+manifests_aligned/
+*.npy
+__pycache__/
+# regenerated artefacts
+figures/Figure1.tif
+figures/Online_Data_Supplement.xlsx
