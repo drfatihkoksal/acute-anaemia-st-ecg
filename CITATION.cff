@@ -8,6 +8,11 @@ authors:
     affiliation: "University of Health Sciences Türkiye, Bursa Yuksek Ihtisas Training and Research Hospital, Bursa, Türkiye"
 license: MIT
 version: 1.0.0
+doi: 10.5281/zenodo.23110836
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23110835
+    description: "Concept DOI (all versions)"
 date-released: 2026-10-02
 repository-code: "https://github.com/drfatihkoksal/acute-anaemia-st-ecg"
 keywords: [anaemia, haemoglobin, electrocardiography, ST-segment depression, MIMIC-IV, HEEDB]

@@ -1,5 +1,7 @@
 # Acute haemoglobin decline and ST-segment depression — analysis code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23110836.svg)](https://doi.org/10.5281/zenodo.23110836)
+
 Code for the study *"Acute haemoglobin decline and ST-segment depression in hospitalised patients: a pre-registered, two-centre, within-patient electrocardiographic study"* (Koksal F; manuscript submitted to the *International Journal of Cardiology*).
 
 The study asks two pre-specified questions in serial 12-lead ECGs from two hospitals: Massachusetts General Hospital (HEEDB, discovery) and Beth Israel Deaconess Medical Center (MIMIC-IV / MIMIC-IV-ECG, external validation).
@@ -76,7 +78,7 @@ Please also cite Goldberger et al., *Circulation* 2000;101:e215–e220 (PhysioNe
 
 ## Citation
 
-See `CITATION.cff`. A Zenodo DOI will be added at the first release.
+Koksal F. Acute haemoglobin decline and ST-segment depression: analysis code (v1.0.0). Zenodo; 2026. doi:10.5281/zenodo.23110836. The concept DOI 10.5281/zenodo.23110835 always resolves to the latest version. See also `CITATION.cff`.
 
 ## Licence
 
