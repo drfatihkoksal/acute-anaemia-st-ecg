@@ -93,7 +93,7 @@ with pd.ExcelWriter(HERE / "Online_Data_Supplement.xlsx") as xw:
                   "Description": [
                       "Adjusted within-patient change in the most negative ST60 per 1 g/dL haemoglobin fall (µV), 90% CI; one ECG pair per patient.",
                       "Adjusted odds ratios (95% CI) for death within 30 days, new vs no new ST depression; acute anaemia cohorts, pooled fixed-effect estimate, and stable-normal-Hb contrast cohorts.",
-                      "Aggregate estimates from the pre-registered analysis code (06_analysis.py sha1 788c5b4d; 11_tolerance_analysis.py sha1 5954a4ad). No individual-level data are included, as required by the data-use agreements."]}
+                      "Aggregate estimates from the protocol analysis code (06_analysis.py sha1 788c5b4d; 11_tolerance_analysis.py sha1 5954a4ad). No individual-level data are included, as required by the data-use agreements."]}
                  ).to_excel(xw, sheet_name="README", index=False)
     panel_a.to_excel(xw, sheet_name="Figure1A", index=False)
     panel_b.to_excel(xw, sheet_name="Figure1B", index=False)

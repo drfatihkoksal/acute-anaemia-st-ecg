@@ -1,18 +1,18 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite it as below."
-title: "Acute haemoglobin decline and ST-segment depression: analysis code"
+title: "Acute haemoglobin decline and the ST segment: analysis code"
 authors:
   - family-names: Koksal
     given-names: Fatih
     orcid: "https://orcid.org/0000-0002-4197-4683"
     affiliation: "University of Health Sciences Türkiye, Bursa Yuksek Ihtisas Training and Research Hospital, Bursa, Türkiye"
 license: MIT
-version: 1.0.0
-doi: 10.5281/zenodo.23110836
+version: 1.0.1
+doi: 10.5281/zenodo.23110835
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23110835
     description: "Concept DOI (all versions)"
-date-released: 2026-10-02
+date-released: 2026-10-20
 repository-code: "https://github.com/drfatihkoksal/acute-anaemia-st-ecg"
 keywords: [anaemia, haemoglobin, electrocardiography, ST-segment depression, MIMIC-IV, HEEDB]

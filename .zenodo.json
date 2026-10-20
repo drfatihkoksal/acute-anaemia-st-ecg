@@ -1,6 +1,6 @@
 {
-  "title": "Acute haemoglobin decline and ST-segment depression: analysis code",
-  "description": "Analysis code, locked protocols and aggregate results for a pre-registered, two-centre, within-patient electrocardiographic study of acute haemoglobin decline and ST-segment depression (HEEDB / MGH discovery; MIMIC-IV / BIDMC external validation). No patient data are included.",
+  "title": "Acute haemoglobin decline and the ST segment: analysis code",
+  "description": "Analysis code, study protocols and aggregate results for a two-centre, within-patient electrocardiographic study of acute haemoglobin decline and the ST segment (HEEDB / MGH discovery; MIMIC-IV / BIDMC external validation). The protocols were prespecified and internally locked, with dated change logs, but were not registered on a public platform before analysis. No patient data are included.",
   "upload_type": "software",
   "license": "MIT",
   "creators": [
@@ -10,5 +10,14 @@
       "affiliation": "University of Health Sciences Türkiye, Bursa Yuksek Ihtisas Training and Research Hospital"
     }
   ],
-  "keywords": ["anaemia", "haemoglobin", "electrocardiography", "ST-segment depression", "MIMIC-IV", "HEEDB", "equivalence"]
+  "keywords": [
+    "anaemia",
+    "haemoglobin",
+    "electrocardiography",
+    "ST-segment depression",
+    "MIMIC-IV",
+    "HEEDB",
+    "equivalence"
+  ],
+  "version": "1.0.1"
 }
