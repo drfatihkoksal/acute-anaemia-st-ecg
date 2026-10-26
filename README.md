@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23110835.svg)](https://doi.org/10.5281/zenodo.23110835)
 
-Code for the study *"Acute haemoglobin decline and the ST segment: within-patient analysis of serial ECGs in two hospitals"* (Koksal F; manuscript under review).
+Code for the study *"Acute haemoglobin decline and ST-segment depression: a two-centre, within-patient study of serial electrocardiograms"* (Koksal F; manuscript under review).
 
 The study asks two questions, each analysed under a written protocol, in serial 12-lead ECGs from two hospitals: Massachusetts General Hospital (HEEDB, discovery) and Beth Israel Deaconess Medical Center (MIMIC-IV / MIMIC-IV-ECG, external validation).
 
@@ -15,9 +15,9 @@ The study asks two questions, each analysed under a written protocol, in serial 
 
 | Path | Contents |
 | --- | --- |
-| `analysis/` | The full pipeline: ECG measurement, cohort building, protocol analyses and exploratory analyses (scripts `01`–`11`, `ecgmeasure_gpu.py`). |
+| `analysis/` | The full pipeline: ECG measurement, cohort building, protocol analyses, exploratory analyses (scripts `01`–`11`, `ecgmeasure_gpu.py`) and post hoc analyses (`12_posthoc_reviewer.py`). |
 | `mimic_manifest/` | Builds the MIMIC ECG-pair manifest (`manifests_aligned/pairs_all.parquet`) used by `analysis/05b`. `ecganemia/` is the minimal package it needs. |
-| `protocols/` | The study protocols with their dated change logs, plus literature notes. Written in Turkish; the analysis decisions, thresholds and hashes are language-independent. |
+| `protocols/` | The study protocols with their dated change logs, plus literature notes, written in Turkish (the analysis decisions, thresholds and hashes are language-independent). The post hoc addendum `concept_addendum_posthoc.md` and its lock file `concept_addendum_posthoc.sha256` are in English. |
 | `results/` | Aggregate outputs (JSON) behind every number in the manuscript. |
 | `figures/` | Scripts that draw the figures from `results/`. `make_figures_jecg.py` draws Figures 1–2 and the supplementary data of the current manuscript (written to `figures/jecg/`); `make_figure_and_supplement.py` draws Figure 1 and the Online Data Supplement of the first submission. |
 
@@ -46,6 +46,15 @@ Exploratory analyses, labelled as such in the paper:
 - `08_tail_st.py`: new ST depression by nadir Hb, troponin
 - `09_feasibility_tolerance.py`: feasibility counts for Analysis 2
 
+Post hoc analyses (v1.1.0), labelled post hoc in the paper:
+
+- `12_posthoc_reviewer.py` (sha1 7af3e6a4) answers questions a reviewer is expected to ask.
+  - Analysis 1: adults only; ST60 by category of Hb change, with equivalence after falls of ≥3 g/dL; later Hb ≤7 g/dL; frequency of new ST depression by Hb change.
+  - Analysis 2: new ST depression defined at the J point; morphology (horizontal/downsloping vs upsloping); pooled estimate without heart-rate adjustment; E-values.
+- The analyses were defined after all protocol results were known. They were set out in `protocols/concept_addendum_posthoc.md`, and the SHA-256 hashes of the addendum and the script were recorded in `protocols/concept_addendum_posthoc.sha256` before the script was run (26 October 2026).
+- Like the protocol timestamps, this record is the author's own and cannot be verified independently; its first public timestamp is this release.
+- The script imports `06_analysis.py` and `11_tolerance_analysis.py` without changing them. It writes `results/posthoc_reviewer.json` (aggregates only; counts below 10 suppressed).
+
 Feasibility and validation scripts:
 
 - `01`, `02`: HEEDB cohort feasibility
@@ -69,7 +78,8 @@ The scripts were run on Linux with Python 3.13, a CUDA GPU (RTX 5090) and the pa
 5. **Analysis 2:**
    - Build the tables with `10_build_tolerance_mgh.py` and `10b_build_tolerance_mimic.py`.
    - Run `11_tolerance_analysis.py --cohort mgh`, then `--cohort mimic`.
-6. **Figures and supplementary data:** `python figures/make_figures_jecg.py` (current manuscript). The first submission's version is `python figures/make_figure_and_supplement.py`.
+6. **Post hoc analyses:** `python analysis/12_posthoc_reviewer.py`. The script reads the addendum from the directory above `analysis/` (the original layout), so copy `protocols/concept_addendum_posthoc.md` there first.
+7. **Figures and supplementary data:** `python figures/make_figures_jecg.py` (current manuscript). The first submission's version is `python figures/make_figure_and_supplement.py`.
 
 ## Data access
 
@@ -86,6 +96,7 @@ Koksal F. Acute haemoglobin decline and the ST segment: analysis code. Zenodo; 2
 
 ## Version history
 
+- **v1.1.0** (26 October 2026): adds the post hoc analyses: `analysis/12_posthoc_reviewer.py`, `protocols/concept_addendum_posthoc.md` with its lock file, and `results/posthoc_reviewer.json`. It also updates the study title. No existing file in `analysis/`, `protocols/` or `results/` changed; all previous SHA1SUMS still match.
 - **v1.0.1** (October 2026): documentation only. Removed the description of the study as "pre-registered" and of the protocols as "time-stamped", added the registration status and order of events, and updated the study title. Added `figures/make_figures_jecg.py`, which draws the current manuscript's figures, including the lead-level Fig. 2, from the existing result files. No file in `analysis/`, `protocols/` or `results/` changed; in `make_figure_and_supplement.py`, only one descriptive string was reworded.
 - **v1.0.0** (2 October 2026): first public release.
 

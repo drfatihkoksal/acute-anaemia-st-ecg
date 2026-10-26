@@ -1,6 +1,6 @@
 {
   "title": "Acute haemoglobin decline and the ST segment: analysis code",
-  "description": "Analysis code, study protocols and aggregate results for a two-centre, within-patient electrocardiographic study of acute haemoglobin decline and the ST segment (HEEDB / MGH discovery; MIMIC-IV / BIDMC external validation). The protocols were prespecified and internally locked, with dated change logs, but were not registered on a public platform before analysis. No patient data are included.",
+  "description": "Analysis code, study protocols and aggregate results for a two-centre, within-patient electrocardiographic study of acute haemoglobin decline and the ST segment (HEEDB / MGH discovery; MIMIC-IV / BIDMC external validation). The protocols were prespecified and internally locked, with dated change logs, but were not registered on a public platform before analysis. Version 1.1.0 adds post hoc analyses that were defined after all protocol results were known, set out in a dated addendum and locked with SHA-256 hashes before they were run (protocols/concept_addendum_posthoc.md). No patient data are included.",
   "upload_type": "software",
   "license": "MIT",
   "creators": [
@@ -19,5 +19,5 @@
     "HEEDB",
     "equivalence"
   ],
-  "version": "1.0.1"
+  "version": "1.1.0"
 }
